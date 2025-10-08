@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formularz</title>
+  <style>
+    body {
+      color: white;
+      background-image: url('7_warszawa_zima_dlaczego-1460x780.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .checkbox-group, .radio-group {
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 5px;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-top: 15px;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .image-container {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <label>
+        Imię:
+        <input type="text" name="imie" />
+      </label>
+
+      <label>
+        Nazwisko:
+        <input type="text" name="nazwisko" />
+      </label>
+
+      <label>
+        Data urodzenia:
+        <input type="date" name="data_urodzenia" />
+      </label>
+
+      <label>
+        Numer tel:
+        <input type="tel" name="nr_tel" />
+      </label>
+
+      <label>
+        Mail:
+        <input type="email" name="mail" />
+      </label>
+
+      <label>
+        Wybierz miejsce:
+        <select name="miejsce">
+          <option value="lazienki">Łazienki</option>
+          <option value="palac_kultury">Pałac Kultury</option>
+          <option value="stadion_narodowy">Stadion Narodowy</option>
+          <option value="muzeum_wp">Muzeum W.P.</option>
+        </select>
+      </label>
+
+      <div class="radio-group">
+        Płeć:
+        <label><input type="radio" name="plec" value="M" /> M</label>
+        <label><input type="radio" name="plec" value="K" /> K</label>
+      </div>
+
+      <div class="checkbox-group">
+        Restauracje:
+        <label><input type="checkbox" name="restauracje" value="pizza" /> Pizza</label>
+        <label><input type="checkbox" name="restauracje" value="mcdonald" /> McDonald</label>
+        <label><input type="checkbox" name="restauracje" value="kfc" /> KFC</label>
+        <label><input type="checkbox" name="restauracje" value="chnul" /> Chnul</label>
+        <label><input type="checkbox" name="restauracje" value="kebab" /> Kebab</label>
+        <label><input type="checkbox" name="restauracje" value="burger" /> Burger</label>
+        <label><input type="checkbox" name="restauracje" value="sushi" /> Sushi</label>
+      </div>
+
+      <label>
+        Życzenie specjalne:
+        <textarea name="zyczenie_specjalne" rows="4" cols="30"></textarea>
+      </label>
+
+      <button type="submit">Wyślij</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <div class="image-container">
+      <img src="robert.jpg" alt="Zdjęcie po prawej stronie" />
+    </div>
+  </div>
+</body>
+</html>
